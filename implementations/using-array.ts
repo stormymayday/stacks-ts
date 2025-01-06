@@ -19,4 +19,12 @@ export default class Stack {
             return this.stackList.pop();
         }
     }
+
+    peek() {
+        if (this.isEmpty()) {
+            return null;
+        } else {
+            return this.stackList[this.stackList.length - 1];
+        }
+    }
 }
