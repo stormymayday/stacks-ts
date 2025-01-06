@@ -3,4 +3,8 @@ export default class Stack {
     constructor() {
         this.stackList = [];
     }
+
+    push(value: number) {
+        this.stackList.push(value);
+    }
 }
