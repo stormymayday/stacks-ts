@@ -11,4 +11,12 @@ export default class Stack {
     push(value: number) {
         this.stackList.push(value);
     }
+
+    pop() {
+        if (this.isEmpty()) {
+            return null;
+        } else {
+            return this.stackList.pop();
+        }
+    }
 }
