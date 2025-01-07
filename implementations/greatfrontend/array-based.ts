@@ -34,7 +34,7 @@ export default class Stack<T> {
      * @return {*} The item at the top of the stack if it is not empty, `undefined` otherwise.
      */
     peek(): T | undefined {
-        return this.isEmpty() ? undefined : this._items[this._items.length - 1];
+        return this.isEmpty() ? undefined : this._items[this.length() - 1];
     }
 
     /**
