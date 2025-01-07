@@ -28,4 +28,12 @@ export default class Stack<T> {
     isEmpty(): boolean {
         return this._items.length === 0;
     }
+
+    /**
+     * Returns the item at the top of the stack without removing it from the stack.
+     * @return {*} The item at the top of the stack if it is not empty, `undefined` otherwise.
+     */
+    peek(): T | undefined {
+        return this.isEmpty() ? undefined : this._items[this._items.length - 1];
+    }
 }
