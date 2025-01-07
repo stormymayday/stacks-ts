@@ -33,18 +33,14 @@ export default class Stack<T> {
      * @return {*} The item at the top of the stack if it is not empty, `undefined` otherwise.
      */
     pop(): T | undefined {
-        if (!this._top) {
+        if (this.isEmpty()) {
             return undefined;
         }
-        const temp = this._top;
-        if (this._length === 1) {
-            this._top = null;
-        } else {
-            this._top = this._top.prev;
-            temp.prev = null;
-        }
+        const node = this._top;
+        this._top = node!.prev;
+        node!.prev = null;
         this._length--;
-        return temp.value;
+        return node!.value;
     }
 
     /**
