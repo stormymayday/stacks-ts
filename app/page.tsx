@@ -1,9 +1,11 @@
-import Stack from "@/implementations/greatfrontend/array-based";
+import Stack from "@/implementations/scott-barret/linked-list-based";
 
-const myStack = new Stack();
-console.log(myStack.peek());
+const myStack = new Stack(0);
+console.log(myStack);
 console.log(myStack.push(1));
-console.log(myStack.peek());
+console.log(myStack.pop());
+console.log(myStack.pop());
+console.log(myStack.pop());
 
 export default function Home() {
     return (
