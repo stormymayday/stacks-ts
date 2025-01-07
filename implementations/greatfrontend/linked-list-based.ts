@@ -66,4 +66,12 @@ export default class Stack<T> {
     peek(): T | undefined {
         return this.isEmpty() ? undefined : this._top!.value;
     }
+
+    /**
+     * Returns the number of items in the stack.
+     * @return {number} The number of items in the stack.
+     */
+    length(): number {
+        return this._length;
+    }
 }
