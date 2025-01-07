@@ -14,4 +14,21 @@ export default class Stack<T> {
         this._top = null;
         this._length = 0;
     }
+
+    /**
+     * Pushes an item onto the top of the stack.
+     * @param {*} item The item to be pushed onto the stack.
+     * @return {number} The new length of the stack.
+     */
+    push(item: T): number {
+        const newNode = new Node(item);
+        if (!this._top) {
+            this._top = newNode;
+        } else {
+            newNode.prev = this._top;
+            this._top = newNode;
+        }
+        this._length++;
+        return this._length;
+    }
 }
