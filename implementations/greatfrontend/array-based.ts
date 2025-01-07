@@ -12,4 +12,12 @@ export default class Stack<T> {
     push(item: T): number {
         return this._items.push(item);
     }
+
+    /**
+     * Remove an item at the top of the stack.
+     * @return {*} The item at the top of the stack if it is not empty, `undefined` otherwise.
+     */
+    pop(): T | undefined {
+        return this._items.pop();
+    }
 }
