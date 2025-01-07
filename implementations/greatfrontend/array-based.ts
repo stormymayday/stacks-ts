@@ -20,4 +20,12 @@ export default class Stack<T> {
     pop(): T | undefined {
         return this._items.pop();
     }
+
+    /**
+     * Determines if the stack is empty.
+     * @return {boolean} `true` if the stack has no items, `false` otherwise.
+     */
+    isEmpty(): boolean {
+        return this._items.length === 0;
+    }
 }
