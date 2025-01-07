@@ -31,4 +31,23 @@ export default class Stack<T> {
         this._length++;
         return this._length;
     }
+
+    /**
+     * Remove an item at the top of the stack.
+     * @return {*} The item at the top of the stack if it is not empty, `undefined` otherwise.
+     */
+    pop(): T | undefined {
+        if (!this._top) {
+            return undefined;
+        }
+        const temp = this._top;
+        if (this._length === 1) {
+            this._top = null;
+        } else {
+            this._top = this._top.prev;
+            temp.prev = null;
+        }
+        this._length--;
+        return temp.value;
+    }
 }
