@@ -50,4 +50,12 @@ export default class Stack<T> {
         this._length--;
         return temp.value;
     }
+
+    /**
+     * Determines if the stack is empty.
+     * @return {boolean} `true` if the stack has no items, `false` otherwise.
+     */
+    isEmpty(): boolean {
+        return this._length === 0;
+    }
 }
