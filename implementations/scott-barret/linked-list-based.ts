@@ -67,4 +67,11 @@ export default class Stack<T> {
             return this._top.value;
         }
     }
+
+    /**
+     * Returns the number of items in the stack.
+     */
+    length(): number {
+        return this._length;
+    }
 }
