@@ -1,12 +1,7 @@
-import Stack from "@/implementations/scott-barret/linked-list-based";
+import Stack from "@/implementations/scott-barret/array-based";
 
-const myStack = new Stack(0);
+const myStack = new Stack();
 console.log(myStack);
-console.log(myStack.length());
-console.log(myStack.peek());
-console.log(myStack.pop());
-console.log(myStack.peek());
-console.log(myStack.length());
 
 export default function Home() {
     return (

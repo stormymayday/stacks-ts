@@ -1,5 +1,5 @@
-export default class Stack {
-    stackList: number[];
+export default class Stack<T> {
+    stackList: Array<T>;
     constructor() {
         this.stackList = [];
     }
@@ -8,7 +8,7 @@ export default class Stack {
         return this.stackList.length === 0;
     }
 
-    push(value: number) {
+    push(value: T) {
         this.stackList.push(value);
     }
 
