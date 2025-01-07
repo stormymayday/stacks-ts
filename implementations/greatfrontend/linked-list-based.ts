@@ -21,13 +21,9 @@ export default class Stack<T> {
      * @return {number} The new length of the stack.
      */
     push(item: T): number {
-        const newNode = new Node(item);
-        if (!this._top) {
-            this._top = newNode;
-        } else {
-            newNode.prev = this._top;
-            this._top = newNode;
-        }
+        const node = new Node(item);
+        node.prev = this._top;
+        this._top = node;
         this._length++;
         return this._length;
     }
