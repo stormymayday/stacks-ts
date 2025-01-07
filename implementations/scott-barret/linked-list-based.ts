@@ -16,6 +16,9 @@ export default class Stack<T> {
         this._length = 1;
     }
 
+    /**
+     * Pushes an item onto the top of the stack.
+     */
     push(value: T): Stack<T> {
         const newNode = new Node(value);
         if (this._length === 0) {
@@ -28,6 +31,9 @@ export default class Stack<T> {
         return this;
     }
 
+    /**
+     * Remove an item at the top of the stack.
+     */
     pop(): Node<T> | undefined {
         if (!this._top) {
             return undefined;
@@ -37,6 +43,17 @@ export default class Stack<T> {
             temp.next = null;
             this._length--;
             return temp;
+        }
+    }
+
+    /**
+     * Determines if the stack is empty.
+     */
+    isEmpty(): boolean {
+        if (!this._top) {
+            return true;
+        } else {
+            return false;
         }
     }
 }
