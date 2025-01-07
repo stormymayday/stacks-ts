@@ -56,4 +56,15 @@ export default class Stack<T> {
             return false;
         }
     }
+
+    /**
+     * Returns the item at the top of the stack without removing it from the stack.
+     */
+    peek(): T | undefined {
+        if (!this._top) {
+            return undefined;
+        } else {
+            return this._top.value;
+        }
+    }
 }
