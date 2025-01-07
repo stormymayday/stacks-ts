@@ -8,9 +8,9 @@ export default class Stack<T> {
         this.stackList.push(value);
     }
 
-    pop() {
+    pop(): T | undefined {
         if (this.isEmpty()) {
-            return null;
+            return undefined;
         } else {
             return this.stackList.pop();
         }
@@ -20,7 +20,7 @@ export default class Stack<T> {
         return this.stackList.length === 0;
     }
 
-    peek() {
+    peek(): T | null {
         if (this.isEmpty()) {
             return null;
         } else {
@@ -28,7 +28,7 @@ export default class Stack<T> {
         }
     }
 
-    size() {
+    size(): number {
         return this.stackList.length;
     }
 }
